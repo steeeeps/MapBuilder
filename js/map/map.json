@@ -1,0 +1,42 @@
+{
+  "basemap": {
+    "tileServiceUrl": "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineCommunity/MapServer"
+  },
+  "extent": {
+    "XMin": -20037507.0672,
+    "YMin": -20036018.7354,
+    "XMax": 20037507.0672,
+    "YMax": 20102482.4102,
+    "SR": 102100,
+    "maxZoom": 17,
+    "minZoom": 0
+  },
+  "gallery": [
+    {
+      "serviceUrl": "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetGray/MapServer",
+      "serviceTitle": "灰色版",
+      "type": "tiled",
+      "serviceImg": "images/tools/gray.png"
+    },
+    {
+      "serviceUrl": "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetCold/MapServer",
+      "serviceTitle": "冷色版",
+      "type": "tiled",
+      "serviceImg": "images/tools/cold.png"
+    },
+    {
+      "serviceUrl": "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineCommunity/MapServer",
+      "serviceTitle": "彩色版",
+      "type": "tiled",
+      "serviceImg": "images/tools/community.png"
+    }
+  ],
+  "proxy": {
+    "url": "proxy.jsp",
+    "alwaysUseProxy": false
+  },
+  "geometryService": {
+    "url": "http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer"
+  },
+  "tianditu": {}
+}

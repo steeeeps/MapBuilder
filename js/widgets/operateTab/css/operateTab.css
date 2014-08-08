@@ -1,0 +1,59 @@
+
+.tabs {
+	height: 40px;
+	background: #eee;
+}
+.tab {
+	height: 40px;
+	line-height: 40px;
+	max-width: 320px;
+	text-align: center;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	vertical-align: baseline;
+	white-space: nowrap;
+	width: 100px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /* Firefox */
+	-webkit-box-sizing: border-box; /* Safari */
+	color: rgba(0, 0, 0, 0.498039);
+	cursor: auto;
+	display: block;
+	float: left;
+	border-right: 1px solid rgba(0, 0, 0, 0.13);
+	position: relative;
+}
+.tab:first-child{
+	width:50px;
+}
+.tabs .active {
+	background: #fff;
+}
+.tab-contents .active{
+	display:block !important;
+}
+.tab-contents {
+	width: 100%;
+}
+.tab-contents .content {
+	padding: 20px;
+	height: 240px;
+	display: none;
+}
+.tab .closebtn {
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: url(http://127.0.0.1:8020/MapBuilder/WebRoot/images/layout/close.png);
+}
+.animate {
+	-webkit-transition: all .125s;
+	-moz-transition: all .125s;
+	-ms-transition: all .125s;
+	transition: all .125s;
+}
+.tabs .tab-index {
+	width: 50px;
+}

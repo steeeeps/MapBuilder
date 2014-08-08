@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>地图开发模板</title>
+		<meta name="description" content="" />
+		<meta name="author" content="taopy" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+
+		<link rel="stylesheet" type="text/css" href="css/default.css">
+		</link>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		</link>
+		<link rel="stylesheet" type="text/css" href="css/tools.css">
+		</link>
+	</head>
+
+	<body>
+		<div id="header">
+
+		</div>
+		<div id="main">
+			<div id="operatePanel">
+				<!-- <div class="operateTab">
+					<div class="tabs">
+						<a href="#tab-index" class="tab tab-index active">首页</a>
+						<a href="#project-info" class="tab">书签 <img src="images/layout/close.png" class="closebtn"/> </a>
+						<a href="#project-settings" class="tab">图层管理</a>
+						<a href="#project-advanced" class="tab">搜索</a> 
+					</div>
+					<div class="tab-contents">
+						<div class="content animate">
+							<div id="selCityHotCityId" class="sel-city-hotcity">
+								<a href="javascript:void(0)" name="定位" style="font-weight:bold;margin-right:5px">定位</a>
+								<a href="javascript:void(0)" name="全国" style="font-weight:bold;margin-right:5px">全国</a>
+								<a href="javascript:void(0)" citycode="127" name="合肥" style="margin-right:5px;*margin-right:1px;">合肥</a>
+								<a href="javascript:void(0)" citycode="75" name="成都" style="margin-right:5px;*margin-right:1px;">成都</a>
+								<a href="javascript:void(0)" citycode="131" name="北京" style="margin-right:5px;*margin-right:1px;">北京</a>
+								<a href="javascript:void(0)" citycode="289" name="上海" style="margin-right:5px;*margin-right:1px;">上海</a>
+								<a href="javascript:void(0)" citycode="257" name="广州" style="margin-right:5px;*margin-right:1px;">广州</a>
+								<a href="javascript:void(0)" citycode="340" name="深圳" style="margin-right:5px;*margin-right:1px;">深圳</a>
+								<a href="javascript:void(0)" citycode="332" name="天津" style="margin-right:5px;*margin-right:1px;">天津</a>
+								<a href="javascript:void(0)" citycode="315" name="南京" style="margin-right:5px;*margin-right:1px;">南京</a>
+								<a href="javascript:void(0)" citycode="179" name="杭州" style="margin-right:5px;*margin-right:1px;">杭州</a>
+								<a href="javascript:void(0)" citycode="218" name="武汉" style="margin-right:5px;*margin-right:1px;">武汉</a>
+							</div>
+						</div>
+
+					</div>
+				</div>  -->
+			</div>
+			<div id="rightPanel">
+				<div id="toolBar">
+					<div id="tool_container" class="tool_container"></div>
+				</div>
+				<div id="mapPanel">
+					<div id="stretchBtn" title="隐藏面板" class="InlineBlock" >
+						<img src="images/layout/left.png" class="stretchImg"/>
+					</div>
+					<span class="copyright" id="copyright"> </span>
+
+					<div id="mapDiv" style="width:100%;height:100%;"></div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/_config/dojoconfig.js"></script>
+		<script type="text/javascript" src="js/_base/base.js"></script>
+
+		<script type="text/javascript">
+            M.init();
+            //动态加载css和js文件
+            M.addLink(document, M.config.ags_css_url);
+            M.addScript(document, M.config.ags_js_url, function() {
+                require(["map/map", "tools/toolbar", 
+                		"widgets/operateTab/OperateTab", 
+                		"widgets/cityList/CityList",
+                		"widgets/bookmark/Bookmark",
+                		"widgets/layerControl/LayerControl",
+                		"dojo/domReady!"], 
+                		function(map, toolbar, OperateTab,
+                				CityList,Bookmark,LayerControl) {
+                					
+                					
+                    myMap = map.initMap();
+                    toolbar.init(myMap);
+
+                    var ot=new OperateTab({
+                    id:"test"
+                    });
+                    ot.placeAt(operatePanel);
+                    ot.startup();
+                    var ct=new CityList({
+                    	widgetTitle:"首页"
+                    },myMap);
+                    ot.add(ct,false);
+                    var bm=new Bookmark();
+                    ot.add(bm,true);
+                    var lc=new LayerControl();
+                    ot.add(lc,true);
+                });
+            });
+
+		</script>
+
+	</body>
+</html>
