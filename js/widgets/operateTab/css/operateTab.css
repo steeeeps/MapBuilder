@@ -46,7 +46,7 @@
 	position: absolute;
 	top: 5px;
 	right: 5px;
-	background: url(http://127.0.0.1:8020/MapBuilder/WebRoot/images/layout/close.png);
+	background: url(../images/close.png);
 }
 .animate {
 	-webkit-transition: all .125s;

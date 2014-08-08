@@ -216,9 +216,9 @@
     //全局配置
 
     var config = {
-        ags_js_url : "http://js.arcgis.com/3.8/init.js",
-        ags_css_url : "http://js.arcgis.com/3.8/jsapi/js/esri/css/esri.css",
-        copyright : "辽宁省测绘地理信息局&nbsp;&nbsp;&nbsp;&nbsp;辽宁省基础地理信息中心&nbsp;&nbsp;&nbsp;&nbsp;辽S（2013）&nbsp;&nbsp;35号 "
+        ags_js_url : "http://js.arcgis.com/3.10/init.js",
+        ags_css_url : "http://js.arcgis.com/3.10/js/esri/css/esri.css",
+        copyright : "steeeeps "
     }
 
     win.M = {

@@ -70,7 +70,7 @@ define("widgets/_base/_BaseWidget",
          */
         _parseUris : function() {
             var uris = module.uri.split("/");
-            var curWidgetUrl = uris.slice(0, 5);
+            var curWidgetUrl = uris.slice(0, 4);
             curWidgetUrl.push(this.widgetName);
             this.cssUri = curWidgetUrl.concat(["css", this.widgetName + ".css"]).join("/");
             if (this._cssFile)

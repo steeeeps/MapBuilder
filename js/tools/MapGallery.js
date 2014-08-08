@@ -13,7 +13,7 @@ define("tools/MapGallery", ["dojo/_base/declare",
         "dojo/_base/event",
         "esri/layers/ArcGISTiledMapServiceLayer",
         "esri/layers/ArcGISDynamicMapServiceLayer",
-        "dojo/text!http://127.0.0.1:8020/MapBuilder/WebRoot/js/map/map.json"], 
+        "dojo/text!../map/map.json"], 
         function(declare, on, json, dc, ds, on,lang,fx,evt,
                  ArcGISTiledMapServiceLayer,ArcGISDynamicMapServiceLayer,config) {
 
