@@ -216,8 +216,8 @@
     //全局配置
 
     var config = {
-        ags_js_url : "http://js.arcgis.com/3.10/init.js",
-        ags_css_url : "http://js.arcgis.com/3.10/js/esri/css/esri.css",
+        ags_js_url : "/arcgis_js_api/3.13/3.13/init.js",
+        ags_css_url : "http://localhost:8080/arcgis_js_api/3.13/3.13/esri/css/esri.css",
         copyright : "steeeeps "
     }
 
